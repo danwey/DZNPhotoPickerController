@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.default_subspec = 'Core'
   s.resources       = 'Resources', 'Source/Resources/**/*.*'
   s.requires_arc 	  = true
-  s.platform        = :ios, '8.0'
+  s.platform        = :ios, '9.0'
 
   s.public_header_files = 'Source/Classes/*/*.h'
 
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
     ss.source_files = 'Source/Classes/Core/*.{h,m}'
     ss.dependency   'DZNPhotoPickerController/Services'
     ss.dependency   'DZNPhotoPickerController/Editor'
-    ss.dependency   'SDWebImage', '~> 3.7'
+    ss.dependency   'SDWebImage'
     ss.dependency   'DZNEmptyDataSet', '~> 1.7'
   end
 
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
     ss.source_files = 'Source/Classes/Services/*.{h,m}',
                       'Source/Classes/Core/DZNPhotoPickerControllerConstants.{h,m}'
 
-    ss.dependency 'AFNetworking', '~> 3.0'
+    ss.dependency 'AFNetworking'
     ss.prefix_header_contents = '#import <MobileCoreServices/MobileCoreServices.h>',
                                 '#import <SystemConfiguration/SystemConfiguration.h>'
   end
